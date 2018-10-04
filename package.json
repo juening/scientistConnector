@@ -1,0 +1,22 @@
+{
+  "name": "scientistconnector",
+  "version": "1.0.0",
+  "description": "Social Network for Local Scientists",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/juening/scientistConnector.git"
+  },
+  "keywords": [
+    "Scientist"
+  ],
+  "author": "Jue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juening/scientistConnector/issues"
+  },
+  "homepage": "https://github.com/juening/scientistConnector#readme"
+}
