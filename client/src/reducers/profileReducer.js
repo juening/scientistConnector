@@ -2,8 +2,7 @@ import {
   GET_PROFILE,
   PROFILE_LOADING,
   CLEAR_CURRENT_PROFILE,
-  GET_PROFILES,
-  PROFILE_NOT_FOUND
+  GET_PROFILES
 } from "../actions/types";
 
 const initialState = {

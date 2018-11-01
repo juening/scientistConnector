@@ -4,7 +4,6 @@ import {
   GET_PROFILE,
   GET_PROFILES,
   PROFILE_LOADING,
-  PROFILE_NOT_FOUND,
   CLEAR_CURRENT_PROFILE,
   GET_ERRORS,
   SET_CURRENT_USER
@@ -23,7 +22,7 @@ export const getCurrentProfile = () => dispatch => {
     )
     .catch(err =>
       dispatch({
-        type: GET_ERRORS,
+        type: GET_PROFILE,
         payload: {}
       })
     );

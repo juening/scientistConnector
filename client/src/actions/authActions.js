@@ -2,16 +2,13 @@ import axios from "axios";
 import setAuthToken from "../utils/setAuthToken";
 import jwtDecode from "jwt-decode";
 
-import { REGISTER_USER, GET_ERRORS, SET_CURRENT_USER } from "./types";
+import { GET_ERRORS, SET_CURRENT_USER } from "./types";
 
 export const registerUser = (userData, history) => dispatch => {
   axios
     .post("/api/users/register", userData)
     .then(res => {
-      dispatch({
-        type: REGISTER_USER,
-        payload: res.data.user
-      });
+      // console.log(res);
       history.push("/login");
     })
     .catch(err =>
