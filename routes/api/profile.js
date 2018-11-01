@@ -109,8 +109,6 @@ router.post(
     if (req.body.location) profileFields.location = req.body.location;
     if (req.body.bio) profileFields.bio = req.body.bio;
     if (req.body.status) profileFields.status = req.body.status;
-    if (req.body.githubusername)
-      profileFields.githubusername = req.body.githubusername;
 
     //skills split into array
     if (typeof req.body.skills !== undefined) {
@@ -132,7 +130,7 @@ router.post(
       .then(profile => {
         if (profile) {
           //update profile
-          Profile.findByIdAndUpdate(
+          Profile.findOneAndUpdate(
             { user: req.user.id },
             { $set: profileFields },
             { new: true }
